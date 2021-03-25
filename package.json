@@ -1,15 +1,25 @@
 {
   "name": "arianne-next",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:npm": "RD /S /Q dist && mkdir dist &&  babel lib -d dist --copy-files"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "next": "10.0.9",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@babel/cli": "^7.13.10",
+    "gsap": "^3.6.0",
+    "next": "10.0.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }

@@ -1,0 +1,21 @@
+// {
+//   "presets": [
+//     [
+//       "@babel/preset-react"
+//     ]
+//   ],
+//     "plugins": [
+//         "styled-jsx/babel"
+//     ]
+// }
+
+
+{
+  "presets": ["next/babel"],
+  "plugins": []
+}
+
+// {
+//   "presets": ["next/babel"],
+//   "plugins": []
+// }
