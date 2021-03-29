@@ -54,35 +54,35 @@ var CircleLoader = function CircleLoader(props) {
       setStrokeWidth = _useState3[1];
 
   (0, _react.useEffect)(function () {
-    if (props.xsmall) {
+    if (props.size === 'xs') {
       setSize(xsmall);
     }
 
-    if (props.small) {
+    if (props.size === 'sm') {
       setSize(small);
     }
 
-    if (props.medium) {
+    if (props.size === 'md') {
       setSize(medium);
     }
 
-    if (props.large) {
+    if (props.size === 'lg') {
       setSize(large);
     }
 
-    if (props.xlarge) {
+    if (props.size === 'xl') {
       setSize(xlarge);
     }
 
-    if (props.slow) {
+    if (props.speed === 'slow') {
       setSpeed('2s');
     }
 
-    if (props.normal) {
+    if (props.speed === 'normal') {
       setSpeed('1s');
     }
 
-    if (props.fast) {
+    if (props.speed === 'fast') {
       setSpeed('0.5s');
     }
 

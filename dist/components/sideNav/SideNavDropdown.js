@@ -21,7 +21,7 @@ var _ThemeColors = _interopRequireDefault(require("../themes/ThemeColors"));
 
 var __jsx = _react["default"].createElement;
 
-var SideNavDropdown = function SideNavDropdown(_ref) {
+var SideNavDropDown = function SideNavDropDown(_ref) {
   var children = _ref.children,
       props = (0, _objectWithoutProperties2["default"])(_ref, ["children"]);
 
@@ -97,5 +97,5 @@ var SideNavDropdown = function SideNavDropdown(_ref) {
   }, children) : null);
 };
 
-var _default = SideNavDropdown;
+var _default = SideNavDropDown;
 exports["default"] = _default;

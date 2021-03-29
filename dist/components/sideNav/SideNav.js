@@ -21,6 +21,14 @@ var _ThemeContext = _interopRequireDefault(require("../contexts/ThemeContext"));
 
 var _ThemeColors = _interopRequireDefault(require("../themes/ThemeColors"));
 
+var _SideNavContainer = _interopRequireDefault(require("./SideNavContainer"));
+
+var _SideNavDropDown = _interopRequireDefault(require("./SideNavDropDown"));
+
+var _SideNavHeader = _interopRequireDefault(require("./SideNavHeader"));
+
+var _SideNavItem = _interopRequireDefault(require("./SideNavItem"));
+
 var __jsx = _react["default"].createElement;
 
 var SideNav = function SideNav(_ref) {
@@ -151,5 +159,9 @@ var SideNav = function SideNav(_ref) {
   }))))))), sideNavOpen ? __jsx(_react["default"].Fragment, null, children) : null));
 };
 
+SideNav.Container = _SideNavContainer["default"];
+SideNav.Dropdown = _SideNavDropDown["default"];
+SideNav.Header = _SideNavHeader["default"];
+SideNav.Item = _SideNavItem["default"];
 var _default = SideNav;
 exports["default"] = _default;

@@ -26,60 +26,6 @@ var __jsx = _react["default"].createElement;
 var Button = function Button(_ref) {
   var children = _ref.children,
       props = (0, _objectWithoutProperties2["default"])(_ref, ["children"]);
-
-  var _useState = (0, _react.useState)(false),
-      properties = _useState[0],
-      setProperties = _useState[1];
-
-  var _useState2 = (0, _react.useState)(400),
-      fontWeight = _useState2[0],
-      setFontWeight = _useState2[1];
-
-  var _useState3 = (0, _react.useState)('none'),
-      border = _useState3[0],
-      setBorder = _useState3[1];
-
-  var colors = _ThemeColors["default"][(0, _react.useContext)(_ThemeContext["default"]).theme];
-
-  (0, _react.useEffect)(function () {
-    if (props.xsmall) {
-      setProperties(xsmall);
-    }
-
-    if (props.small) {
-      setProperties(small);
-    }
-
-    if (props.medium) {
-      setProperties(medium);
-    }
-
-    if (props.large) {
-      setProperties(large);
-    }
-
-    if (props.bold) {
-      setFontWeight(600);
-    }
-
-    if (props.outlined) {
-      if (colors) {
-        setBorder('solid 1px ' + colors.contrast);
-      }
-
-      if (!colors) {
-        setBorder('solid 1px ' + _ThemeColors["default"].light.contrast);
-      }
-
-      if (props.color) {
-        setBorder('solid 1px ' + props.color);
-      }
-    }
-
-    if (props.transparent) {
-      setBorder('none');
-    }
-  }, [colors]);
   var xsmall = {
     height: 24,
     padding: '2px 8px',
@@ -108,6 +54,60 @@ var Button = function Button(_ref) {
     lineHeight: 22,
     iconWidth: 20
   };
+
+  var _useState = (0, _react.useState)(medium),
+      properties = _useState[0],
+      setProperties = _useState[1];
+
+  var _useState2 = (0, _react.useState)(400),
+      fontWeight = _useState2[0],
+      setFontWeight = _useState2[1];
+
+  var _useState3 = (0, _react.useState)('none'),
+      border = _useState3[0],
+      setBorder = _useState3[1];
+
+  var colors = _ThemeColors["default"][(0, _react.useContext)(_ThemeContext["default"]).theme];
+
+  (0, _react.useEffect)(function () {
+    if (props.size === 'xs') {
+      setProperties(xsmall);
+    }
+
+    if (props.size === 'sm') {
+      setProperties(small);
+    }
+
+    if (props.size === 'md') {
+      setProperties(medium);
+    }
+
+    if (props.size === 'lg') {
+      setProperties(large);
+    }
+
+    if (props.bold) {
+      setFontWeight(600);
+    }
+
+    if (props.outlined) {
+      if (colors) {
+        setBorder('solid 1px ' + colors.contrast);
+      }
+
+      if (!colors) {
+        setBorder('solid 1px ' + _ThemeColors["default"].light.contrast);
+      }
+
+      if (props.color) {
+        setBorder('solid 1px ' + props.color);
+      }
+    }
+
+    if (props.transparent) {
+      setBorder('none');
+    }
+  }, [colors]);
 
   var onClick = function onClick(event) {
     var rect = event.target.getBoundingClientRect();
@@ -158,22 +158,22 @@ var Button = function Button(_ref) {
   };
 
   return __jsx(_react["default"].Fragment, null, __jsx(_style["default"], {
-    id: "3344501166",
-    dynamic: [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter]
-  }, ".button.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;height:".concat(properties.height, "px;background-color:").concat(props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, ";border:").concat(border, ";border-radius:6px;padding:").concat(properties.padding, ";font-weight:").concat(fontWeight, ";font-size:").concat(properties.fontSize, "px;line-height:").concat(properties.lineHeight, "px;cursor:pointer;outline:none;color:").concat(props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, ";overflow:hidden;}.button.__jsx-style-dynamic-selector:hover{-webkit-filter:saturate(150%);filter:saturate(150%);}.contentContainer.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.iconLeft.__jsx-style-dynamic-selector,.iconRight.__jsx-style-dynamic-selector{width:").concat(properties.iconWidth, "px;-webkit-filter:").concat(colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, ";filter:").concat(colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, ";}.iconLeft.__jsx-style-dynamic-selector{margin-right:8px;}.iconRight.__jsx-style-dynamic-selector{margin-left:8px;}")), __jsx("div", {
-    className: _style["default"].dynamic([["3344501166", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter]]])
+    id: "607104426",
+    dynamic: [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, props.customCss]
+  }, ".button.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;height:".concat(properties.height, "px;background-color:").concat(props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, ";border:").concat(border, ";border-radius:6px;padding:").concat(properties.padding, ";font-weight:").concat(fontWeight, ";font-size:").concat(properties.fontSize, "px;line-height:").concat(properties.lineHeight, "px;cursor:pointer;outline:none;color:").concat(props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, ";overflow:hidden;}.button.__jsx-style-dynamic-selector:hover{-webkit-filter:saturate(150%);filter:saturate(150%);}.contentContainer.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.iconLeft.__jsx-style-dynamic-selector,.iconRight.__jsx-style-dynamic-selector{width:").concat(properties.iconWidth, "px;-webkit-filter:").concat(colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, ";filter:").concat(colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, ";}.iconLeft.__jsx-style-dynamic-selector{margin-right:8px;}.iconRight.__jsx-style-dynamic-selector{margin-left:8px;}.customCss.__jsx-style-dynamic-selector{").concat(props.customCss, ";}")), __jsx("div", {
+    className: _style["default"].dynamic([["607104426", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, props.customCss]]])
   }, __jsx("div", {
-    className: _style["default"].dynamic([["3344501166", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter]]]) + " " + "container"
+    className: _style["default"].dynamic([["607104426", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, props.customCss]]]) + " " + "container"
   }, __jsx("button", {
     onClick: onClick,
     type: props.submit ? 'submit' : 'button',
-    className: _style["default"].dynamic([["3344501166", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter]]]) + " " + "button"
+    className: _style["default"].dynamic([["607104426", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, props.customCss]]]) + " " + "button customCss"
   }, props.iconLeft ? __jsx("img", {
     src: props.iconSrc,
-    className: _style["default"].dynamic([["3344501166", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter]]]) + " " + "iconLeft"
+    className: _style["default"].dynamic([["607104426", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, props.customCss]]]) + " " + "iconLeft"
   }) : null, children, props.iconRight ? __jsx("img", {
     src: props.iconSrc,
-    className: _style["default"].dynamic([["3344501166", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter]]]) + " " + "iconRight"
+    className: _style["default"].dynamic([["607104426", [properties.height, props.outlined || props.transparent ? 'transparent' : props.color ? props.color : props.accent ? colors ? colors.accent : _ThemeColors["default"].light.accent : colors ? colors.main : _ThemeColors["default"].light.main, border, properties.padding, fontWeight, properties.fontSize, properties.lineHeight, props.textColor ? props.textColor : props.color ? props.color : props.accent ? '#FFFFFF' : colors ? colors.contrast : _ThemeColors["default"].light.contrast, properties.iconWidth, colors ? colors.invertedFilter : _ThemeColors["default"].light.invertedFilter, props.customCss]]]) + " " + "iconRight"
   }) : null))));
 };
 

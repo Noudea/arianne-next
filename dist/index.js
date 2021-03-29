@@ -65,12 +65,6 @@ Object.defineProperty(exports, "List", {
     return _List["default"];
   }
 });
-Object.defineProperty(exports, "ListItem", {
-  enumerable: true,
-  get: function get() {
-    return _ListItem["default"];
-  }
-});
 Object.defineProperty(exports, "CircleLoader", {
   enumerable: true,
   get: function get() {
@@ -105,30 +99,6 @@ Object.defineProperty(exports, "SideNav", {
   enumerable: true,
   get: function get() {
     return _SideNav["default"];
-  }
-});
-Object.defineProperty(exports, "SideNavContainer", {
-  enumerable: true,
-  get: function get() {
-    return _SideNavContainer["default"];
-  }
-});
-Object.defineProperty(exports, "SideNavDropdown", {
-  enumerable: true,
-  get: function get() {
-    return _SideNavDropDown["default"];
-  }
-});
-Object.defineProperty(exports, "SideNavHeader", {
-  enumerable: true,
-  get: function get() {
-    return _SideNavHeader["default"];
-  }
-});
-Object.defineProperty(exports, "SideNavItem", {
-  enumerable: true,
-  get: function get() {
-    return _SideNavItem["default"];
   }
 });
 Object.defineProperty(exports, "LightDarkSwitch", {
@@ -188,8 +158,6 @@ var _Dropdown = _interopRequireDefault(require("./components/dropdown/Dropdown")
 
 var _List = _interopRequireDefault(require("./components/list/List"));
 
-var _ListItem = _interopRequireDefault(require("./components/list/ListItem"));
-
 var _CircleLoader = _interopRequireDefault(require("./components/loader/CircleLoader"));
 
 var _NavBar = _interopRequireDefault(require("./components/navbar/NavBar"));
@@ -201,14 +169,6 @@ var _GeneralProvider = _interopRequireDefault(require("./components/providers/Ge
 var _NavProvider = _interopRequireDefault(require("./components/providers/NavProvider"));
 
 var _SideNav = _interopRequireDefault(require("./components/sideNav/SideNav"));
-
-var _SideNavContainer = _interopRequireDefault(require("./components/sideNav/SideNavContainer"));
-
-var _SideNavDropDown = _interopRequireDefault(require("./components/sideNav/SideNavDropDown"));
-
-var _SideNavHeader = _interopRequireDefault(require("./components/sideNav/SideNavHeader"));
-
-var _SideNavItem = _interopRequireDefault(require("./components/sideNav/SideNavItem"));
 
 var _LightDarkSwitch = _interopRequireDefault(require("./components/switch/LightDarkSwitch"));
 

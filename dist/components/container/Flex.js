@@ -19,11 +19,11 @@ var Flex = function Flex(_ref) {
   var children = _ref.children,
       props = (0, _objectWithoutProperties2["default"])(_ref, ["children"]);
   return __jsx("div", {
-    className: _style["default"].dynamic([["318214412", [props.flexDirection ? props.flexDirection : 'row', props.justifyContent, props.alignItems]]]) + " " + 'flexContainer'
+    className: _style["default"].dynamic([["955878352", [props.width ? props.width : '100%', props.height ? props.height : '100%', props.flexDirection ? props.flexDirection : 'row', props.justifyContent, props.alignItems]]]) + " " + 'flexContainer'
   }, __jsx(_style["default"], {
-    id: "318214412",
-    dynamic: [props.flexDirection ? props.flexDirection : 'row', props.justifyContent, props.alignItems]
-  }, ".flexContainer.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:".concat(props.flexDirection ? props.flexDirection : 'row', ";-ms-flex-direction:").concat(props.flexDirection ? props.flexDirection : 'row', ";flex-direction:").concat(props.flexDirection ? props.flexDirection : 'row', ";-webkit-box-pack:").concat(props.justifyContent, ";-webkit-justify-content:").concat(props.justifyContent, ";-ms-flex-pack:").concat(props.justifyContent, ";justify-content:").concat(props.justifyContent, ";-webkit-align-items:").concat(props.alignItems, ";-webkit-box-align:").concat(props.alignItems, ";-ms-flex-align:").concat(props.alignItems, ";align-items:").concat(props.alignItems, ";}")), children);
+    id: "955878352",
+    dynamic: [props.width ? props.width : '100%', props.height ? props.height : '100%', props.flexDirection ? props.flexDirection : 'row', props.justifyContent, props.alignItems]
+  }, ".flexContainer.__jsx-style-dynamic-selector{width :".concat(props.width ? props.width : '100%', ";height :").concat(props.height ? props.height : '100%', ";display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:").concat(props.flexDirection ? props.flexDirection : 'row', ";-ms-flex-direction:").concat(props.flexDirection ? props.flexDirection : 'row', ";flex-direction:").concat(props.flexDirection ? props.flexDirection : 'row', ";-webkit-box-pack:").concat(props.justifyContent, ";-webkit-justify-content:").concat(props.justifyContent, ";-ms-flex-pack:").concat(props.justifyContent, ";justify-content:").concat(props.justifyContent, ";-webkit-align-items:").concat(props.alignItems, ";-webkit-box-align:").concat(props.alignItems, ";-ms-flex-align:").concat(props.alignItems, ";align-items:").concat(props.alignItems, ";}")), children);
 };
 
 var _default = Flex;

@@ -50,19 +50,19 @@ var Dropdown = function Dropdown(_ref) {
       setBoxShadow = _useState5[1];
 
   (0, _react.useEffect)(function () {
-    if (props.xsmall) {
+    if (props.size === 'xsmall') {
       setProperties(xsmall);
     }
 
-    if (props.small) {
+    if (props.size === 'small') {
       setProperties(small);
     }
 
-    if (props.medium) {
+    if (props.size === 'medium') {
       setProperties(medium);
     }
 
-    if (props.large) {
+    if (props.size === 'large') {
       setProperties(large);
     }
 

@@ -23,6 +23,12 @@ var _ListItem = _interopRequireDefault(require("./ListItem"));
 
 var __jsx = _react["default"].createElement;
 
+//props
+// data
+//searchable
+// xsmal small medium large
+// title
+// ordered
 var List = function List(props) {
   var colors = _ThemeColors["default"][(0, _react.useContext)(_ThemeContext["default"]).theme];
 
@@ -90,9 +96,8 @@ var List = function List(props) {
   }, data.filter(function (data) {
     return data.includes(inputValue);
   }).map(function (filteredData, index) {
-    return __jsx(_ListItem["default"], {
+    return __jsx(List.Item, {
       margin: margin,
-      theme: props.theme,
       key: index
     }, filteredData);
   })) : __jsx("ul", {
@@ -100,7 +105,7 @@ var List = function List(props) {
   }, data.filter(function (data) {
     return data.includes(inputValue);
   }).map(function (filteredData, index) {
-    return __jsx(_ListItem["default"], {
+    return __jsx(List.Item, {
       margin: margin,
       theme: props.theme,
       key: index
@@ -108,5 +113,6 @@ var List = function List(props) {
   }))) : null);
 };
 
+List.Item = _ListItem["default"];
 var _default = List;
 exports["default"] = _default;

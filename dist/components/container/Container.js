@@ -19,11 +19,11 @@ var Container = function Container(_ref) {
   var children = _ref.children,
       props = (0, _objectWithoutProperties2["default"])(_ref, ["children"]);
   return __jsx("div", {
-    className: _style["default"].dynamic([["3139691289", [props.width ? props.width : '100%', props.backgroundColor ? props.backgroundColor : 'transparent', props.margin ? props.margin : '0px', props.padding ? props.padding : '0px']]]) + " " + 'container'
+    className: _style["default"].dynamic([["1706657708", [props.width ? props.width : '100%', props.height ? props.height : '100%', props.backgroundColor ? props.backgroundColor : 'transparent', props.margin ? props.margin : '0px', props.padding ? props.padding : '0px']]]) + " " + 'container'
   }, __jsx(_style["default"], {
-    id: "3139691289",
-    dynamic: [props.width ? props.width : '100%', props.backgroundColor ? props.backgroundColor : 'transparent', props.margin ? props.margin : '0px', props.padding ? props.padding : '0px']
-  }, ".container.__jsx-style-dynamic-selector{width :".concat(props.width ? props.width : '100%', ";background-color :").concat(props.backgroundColor ? props.backgroundColor : 'transparent', ";margin :").concat(props.margin ? props.margin : '0px', ";padding :").concat(props.padding ? props.padding : '0px', ";}")), children);
+    id: "1706657708",
+    dynamic: [props.width ? props.width : '100%', props.height ? props.height : '100%', props.backgroundColor ? props.backgroundColor : 'transparent', props.margin ? props.margin : '0px', props.padding ? props.padding : '0px']
+  }, ".container.__jsx-style-dynamic-selector{width :".concat(props.width ? props.width : '100%', ";height :").concat(props.height ? props.height : '100%', ";background-color :").concat(props.backgroundColor ? props.backgroundColor : 'transparent', ";margin :").concat(props.margin ? props.margin : '0px', ";padding :").concat(props.padding ? props.padding : '0px', ";}")), children);
 };
 
 var _default = Container;
